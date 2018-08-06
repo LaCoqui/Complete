@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Optional: some overlay text to describe the video -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  <video autoplay muted loop id="myVideo">
+  <source src="Raindrops_Videvo.mp4" type="video/mp4">
+</video>
+
+
+
+  * {
+      box-sizing: border-box;
+  }
+
+  <body> {
+
+
+
+      margin: 0;
+      font-family: Arial;
+      font-size: 17px;
+  }
+
+  #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+  }
+
+  .content {
+      position: fixed;
+      top:30%;
+      bottom:50%;
+      height: 200;
+      width: 100;
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+  }
+
+  #myBtn {
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      background: #000;
+      color: #A23B72;
+      cursor: pointer;
+  }
+
+  #myBtn:hover {
+      background: #ddd;
+      color: black;
+  }
+  .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+  </style>
+  </head>
+</body>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="Raindrops_Videvo.mp4" type="video/mp4">
+  </video>
+
+  <div class="content">
+    <center><h2>Welcome to COMPLETE</h2>
+    <button id="myBtn" onclick="myFunction()">Get Started</button></center>
+  </div>
+</head>
+<body>
+
+<div class="container">
+  <img src="https://mail.google.com/mail/u/0/?ui=2&ik=10b3e317d2&view=fimg&th=1650ff24e943b630&attid=0.1&disp=emb&realattid=ii_jkighr8n0_1650ff23d6a626f4&attbid=ANGjdJ8FtZQil5hAn3M8oXxsQxpO2_QA-jiMEQPhI8CgrljsFUKJuSTY29zt9-feTagenlp_XsZedYiFS7pF_FRlllEqQwlLSih6qi32cGeNDA5HrR9gd3LYJ1WM_QE&sz=w604-h318&ats=1533576710205&rm=1650ff24e943b630&zw&atsh=1.jpg" alt="Logo" style="width: 100%; max-width: 300px" class="image">
+  </div>
+</div>
+  <script>
+  var video = document.getElementById("myVideo");
+  var btn = document.getElementById("myBtn");
+
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Get Started";
+    } else {
+      video.pause();
+      btn.innerHTML = "Get Started";
+    }
+  }
+
+  </script>
+
+</body>
+</html>
